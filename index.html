@@ -2,15 +2,19 @@
 <html>
 <meta charset="utf-8">
   <head>
-      <link rel="stylesheet" href="lib/bootswatch-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <link href='https://fonts.googleapis.com/css?family=Univers|Kalam' rel='stylesheet' type='text/css'>
       <script src="lib/d3/d3.min.js"></script>
 
       <style>
         body{
-            background-color: #222;
+           
+
+
         }
+
+         
         
         .main-content{
             padding: 4em;
@@ -23,25 +27,25 @@
         }
         .body-text {
             font-family: 'Univers', sans-serif !important;
-            color : #aaa;
+            
         }
         .changing{
             
         }
         .changing-left{
-            position: absolute;
+            position: fixed;
             top:0px;
             bottom:0px;
-            width: 4px;
+            width: 1em;
             
         }
 
         .changing-right{
-            position: absolute;
+            position: fixed;
             top:0px;
             right:0px;
             bottom:0px;
-            width: 4px;
+            width: 1em;
             
         }
 
@@ -61,7 +65,7 @@
     <div class="changing changing-left"></div>
     <div class="changing changing-right"></div>
      
-    <div class="container-fluid main-content">
+    <div class="container main-content">
         <div class="row">
         
         <div class="col col-sm-6 col-sm-offset-3">
@@ -71,7 +75,7 @@
             <h1 class="text-center display">Mauro Bianchi</h1>
         </div>
 
-        <div class="text-center lead body-text">
+        <div class="text-center lead body-text section">
             <p>
                 I am a software developer living near Bergamo, Italy.
             </p>
