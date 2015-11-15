@@ -37,7 +37,7 @@
             
         }
         .changing-left{
-            position: fixed;
+            position: absolute;
             top:0px;
             bottom:0px;
             width: 1em;
@@ -45,7 +45,7 @@
         }
 
         .changing-right{
-            position: fixed;
+            position: absolute;
             top:0px;
             right:0px;
             bottom:0px;
@@ -158,12 +158,13 @@
     var idx = 0;
     function changeBack(){
         var h = Math.random() * 360;
-        var s = Math.max(Math.random() * 100, 80);
+        var s = Math.max(Math.random() * 100, 20);
+        //var l = Math.max(Math.random(), .20);
 
         b
         .transition()
         .duration(8000)
-        .style("background-color", d3.hsl(h, s, .75) )
+        .style("background-color", d3.hsl(h, s, .5) )
         
         setTimeout(changeBack, 8100);
     }
