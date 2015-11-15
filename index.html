@@ -10,18 +10,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Univers|Kalam' rel='stylesheet' type='text/css'>
 
-
         <style>
         body{
-           
-
 
         }
-
-         
         
         .main-content{
-            padding: 4em;
+            padding: 3em;
+            padding-top:1em;
         }
         .section{
             margin-top: 2em;   
@@ -72,17 +68,26 @@
   <body>
     <div class="changing changing-left"></div>
     <div class="changing changing-right"></div>
-     
+    
     <div class="container main-content">
+
     <div class="row">
         
         <div class="col col-sm-6 col-sm-offset-3">
-            
             <div class="text-center">
-                <p class="text-center lead body-text">hello, my name is</p>
+                <h4 class="text-center lead body-text">hello, my name is</h4>
+                
+                <div class="changing" style="height:4px;"></div> 
+                <div class="changing2" style="height:3px;"></div>  
+                <div class="changing" style="height:12px;"></div>
                 <h1 class="text-center display main-name">Mauro Bianchi</h1>
+                <div class="changing" style="height:12px;"></div>
+                <div class="changing2" style="height:3px;"></div>  
+                <div class="changing" style="height:4px;"></div> 
+                
+                
             </div>
-
+            
         
             <p class="text-center lead body-text section">
                 I am a software developer living near Bergamo, Italy.
@@ -100,9 +105,8 @@
                 and frameworks
                 like <span class="display">Python</span> and <span class="display">Django</span>, <span class="display">Angular</span>, <span class="display">D3.js</span> &amp; <span class="display">Ionic Framework</span>
             </p>
-        
 
-            
+
             <p class="text-center lead body-text section">
                 I design and implement tools and applications for data collection, processing, juggling and visualization.<br> Love maps, photography, and any other mean of representing outer and inner worlds.
             </p>
@@ -139,6 +143,7 @@
         
     </div>
     </div>
+    
 
 
     <script src="lib/d3/d3.min.js"></script>
@@ -149,13 +154,14 @@
     var idx = 0;
     function changeBack(){
         var h = Math.random() * 360;
-        var s = 100;
+        var s = Math.max(Math.random() * 100, 80);
 
         b
         .transition()
-        .duration(4000)
-        .style("background-color", d3.hsl(h, s, .5) )
-        setTimeout(changeBack, 4100);
+        .duration(8000)
+        .style("background-color", d3.hsl(h, s, .75) )
+        
+        setTimeout(changeBack, 8100);
     }
     
     changeBack();
