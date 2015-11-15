@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+  <head>
+      <link rel="stylesheet" href="lib/bootswatch-dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Univers|Kalam' rel='stylesheet' type='text/css'>
+      <script src="lib/d3/d3.min.js"></script>
+
+      <style>
+        body{
+            background-color: #222;
+        }
+        
+        .main-content{
+            padding: 4em;
+        }
+        .section{
+            margin-top: 2em;   
+        }
+        .display {
+            font-family: 'Kalam', cursive !important;
+        }
+        .body-text {
+            font-family: 'Univers', sans-serif !important;
+            color : #aaa;
+        }
+        .changing{
+            
+        }
+        .changing-left{
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            width: 4px;
+            
+        }
+
+        .changing-right{
+            position: absolute;
+            top:0px;
+            right:0px;
+            bottom:0px;
+            width: 4px;
+            
+        }
+
+        .changing-top{
+            position: absolute;
+            top:0px;
+            right:0px;
+            left:0px;
+            height:3px;
+            
+        }
+
+
+      </style>
+  </head>
+  <body>
+    <div class="changing changing-left"></div>
+    <div class="changing changing-right"></div>
+     
+    <div class="container-fluid main-content">
+        <div class="row">
+        
+        <div class="col col-sm-6 col-sm-offset-3">
+
+            <div class="text-center">
+            <p class="text-center lead body-text">hello, my name is</p>
+            <h1 class="text-center display">Mauro Bianchi</h1>
+        </div>
+
+        <div class="text-center lead body-text">
+            <p>
+                I am a software developer living near Bergamo, Italy.
+            </p>
+        </div>
+
+
+        <div class="text-center lead body-text section">
+            <p>
+                I founded and work at <a class="display" target="_blank" href="http://www.inmagik.com">INMAGIK</a>
+            </p>
+        </div>
+
+        <div class="text-center lead body-text section">
+            <p>
+                I do full stack web developement with opensource languages
+                and frameworks
+                like <span class="display">Python</span> and <span class="display">Django</span>, <span class="display">Angular</span>, <span class="display">D3.js</span> &amp; <span class="display">Ionic Framework</span>
+            </p>
+        </div>
+
+        
+            <p class="text-center lead body-text section">
+                I design and implement tools and applications for data collection, processing, juggling and visualization.<br> Love maps, photography, and any other mean of representing outer and inner worlds.
+            </p>
+        
+
+        
+
+        
+        <div class="text-center lead body-text section">
+            <p>
+                Here you can check out some of my stuff
+            </p>
+            <div class="row">
+                <div class="col col-xs-3 col-xs-offset-3 text-center display">
+                    <a target="_blank" href="https://github.com/bianchimro">
+                        <i class="fa fa-2x fa-github-square"></i><br>
+                        github
+                    </a>    
+                </div>
+                <div class="col col-xs-3 display">
+                    <a target="_blank" href="https://twitter.com/bianchimro">
+                        <i class="fa fa-2x fa-twitter"></i><br>
+                        twitter
+                    </a>    
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="text-center lead body-text section">
+            <p>
+                To contact me, just drop me a mail at <br><a class="display" href="mailto:mauro.bianchi@inmagik.com">mauro.bianchi@inmagik.com</a>
+            </p>
+        </div>
+
+
+        </div>
+        
+    </div>
+    </div>
+
+
+
+
+    
+     
+    
+
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootswatch-dist/js/bootstrap.min.js"></script>
+    
+    <script>
+
+    var b = d3.selectAll(".changing")
+    var idx = 0;
+    function changeBack(){
+        var h = Math.random() * 360;
+        var s = 100;
+
+        b
+        .transition()
+        .duration(4000)
+        .style("background-color", d3.hsl(h, s, .5) )
+        setTimeout(changeBack, 4100);
+    }
+    
+    changeBack()
+
+
+
+    </script>
+
+  </body>
+</html>
